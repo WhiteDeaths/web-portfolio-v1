@@ -13,7 +13,7 @@ function App() {
   return (
     <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: '#000' }}>
       {/* Particles background at the top */}
-      <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+      <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
         <Particles
           particleColors={['#ffffff', '#ffffff']}
           particleCount={200}
@@ -29,11 +29,12 @@ function App() {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}>
           <h1 className={styles.aboutMe} style={{ background: 'none', boxShadow: 'none', marginBottom: 0, padding: 0 }}>
             <TextType
-              text={["Welcome to my portfolio"]}
+              text={["Welcome To My Portfolio!"]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
               cursorCharacter="|"
+              cursorBlinkDuration={0.3}
             />
           </h1>
         </div>
