@@ -84,20 +84,24 @@ function App() {
               <div id="languages">
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Languages I Know</h1>
                 <div className={styles.languages}>
-                  <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" />
-                  <TechStackIcon TechStackIcon={reactLogo} Language="React" />
-                  <TechStackIcon TechStackIcon={cssLogo} Language="CSS" />
-                  <TechStackIcon TechStackIcon={htmlLogo} Language="HTML" />
-                  <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" />
-                  <TechStackIcon TechStackIcon={pythonLogo} Language="Python" />
-                  <TechStackIcon TechStackIcon={nodejsLogo} Language="Node.js" />
-                  <TechStackIcon TechStackIcon={cLogo} Language="C" />
-                  <TechStackIcon TechStackIcon={cppLogo} Language="C++" />
-                  <TechStackIcon TechStackIcon={javaLogo} Language="Java" />
-                  <TechStackIcon TechStackIcon={goLogo} Language="Go" />
-                  <TechStackIcon TechStackIcon={phpLogo} Language="PHP" />
-                  <TechStackIcon TechStackIcon={rubyLogo} Language="Ruby" />
-                  <TechStackIcon TechStackIcon={swiftLogo} Language="Swift" />
+                  <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
+                    <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" />
+                    <TechStackIcon TechStackIcon={reactLogo} Language="React" />
+                    <TechStackIcon TechStackIcon={cssLogo} Language="CSS" />
+                    <TechStackIcon TechStackIcon={htmlLogo} Language="HTML" />
+                    <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" />
+                    <TechStackIcon TechStackIcon={pythonLogo} Language="Python" />
+                    <TechStackIcon TechStackIcon={nodejsLogo} Language="Node.js" />
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
+                    <TechStackIcon TechStackIcon={cLogo} Language="C" />
+                    <TechStackIcon TechStackIcon={cppLogo} Language="C++" />
+                    <TechStackIcon TechStackIcon={javaLogo} Language="Java" />
+                    <TechStackIcon TechStackIcon={goLogo} Language="Go" />
+                    <TechStackIcon TechStackIcon={phpLogo} Language="PHP" />
+                    <TechStackIcon TechStackIcon={rubyLogo} Language="Ruby" />
+                    <TechStackIcon TechStackIcon={swiftLogo} Language="Swift" />
+                  </div>
                 </div>
               </div>
             </SpotlightCard>
