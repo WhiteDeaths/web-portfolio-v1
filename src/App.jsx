@@ -86,7 +86,7 @@ function App() {
                 <div className={styles.languages}>
                   <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
                     <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" />
-                    <TechStackIcon TechStackIcon={reactLogo} Language="React" />
+                    <TechStackIcon TechStackIcon={reactLogo} Language="React" style={{ width: 38, height: 38 }} />
                     <TechStackIcon TechStackIcon={cssLogo} Language="CSS" />
                     <TechStackIcon TechStackIcon={htmlLogo} Language="HTML" />
                     <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" />
@@ -97,7 +97,6 @@ function App() {
                     <TechStackIcon TechStackIcon={cLogo} Language="C" />
                     <TechStackIcon TechStackIcon={cppLogo} Language="C++" />
                     <TechStackIcon TechStackIcon={javaLogo} Language="Java" />
-                    <TechStackIcon TechStackIcon={goLogo} Language="Go" />
                     <TechStackIcon TechStackIcon={phpLogo} Language="PHP" />
                     <TechStackIcon TechStackIcon={rubyLogo} Language="Ruby" />
                     <TechStackIcon TechStackIcon={swiftLogo} Language="Swift" />
