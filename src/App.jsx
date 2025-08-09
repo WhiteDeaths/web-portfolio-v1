@@ -4,12 +4,22 @@ import viteLogo from '/vite.svg';
 import jsLogo from './assets/js.svg';
 import cssLogo from './assets/css.svg';
 import htmlLogo from './assets/html.svg';
+import TextType from './TextType';
 
 function App() {
   return (
     <div className={styles.darkVeilBackground}>
       <div className={styles.darkVeilOverlay}></div>
       <div className={styles.container}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}>
+          <TextType
+            text={["Welcome to my portfolio"]}
+            typingSpeed={75}
+            pauseDuration={1500}
+            showCursor={true}
+            cursorCharacter="|"
+          />
+        </div>
         <section className={styles.aboutMe}>
           <h1>About Me</h1>
           <p>
