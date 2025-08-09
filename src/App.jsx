@@ -8,7 +8,6 @@ import typescriptLogo from './assets/typescript.svg';
 import pythonLogo from './assets/python.svg';
 import nodejsLogo from './assets/nodejs.svg';
 import cLogo from './assets/c.svg';
-import cppLogo from './assets/cpp.svg';
 import javaLogo from './assets/java.svg';
 import goLogo from './assets/go.svg';
 import phpLogo from './assets/php.svg';
@@ -85,19 +84,18 @@ function App() {
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Languages I Know</h1>
                 <div className={styles.languages}>
                   <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
-                    <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" />
+                    <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" style={{ width: 38, height: 38 }} />
                     <TechStackIcon TechStackIcon={reactLogo} Language="React" style={{ width: 38, height: 38 }} />
-                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" Language="CSS" />
-                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" Language="HTML" />
-                    <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" />
-                    <TechStackIcon TechStackIcon={pythonLogo} Language="Python" />
-                    <TechStackIcon TechStackIcon={nodejsLogo} Language="Node.js" />
+                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" Language="CSS" style={{ width: 38, height: 38 }} />
+                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" Language="HTML" style={{ width: 38, height: 38 }} />
+                    <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" style={{ width: 38, height: 38 }} />
+                    <TechStackIcon TechStackIcon={pythonLogo} Language="Python" style={{ width: 38, height: 38 }} />
+                    <TechStackIcon TechStackIcon={nodejsLogo} Language="Node.js" style={{ width: 38, height: 38 }} />
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
-                    <TechStackIcon TechStackIcon={cLogo} Language="C" />
-                    <TechStackIcon TechStackIcon={cppLogo} Language="C++" />
-                    <TechStackIcon TechStackIcon={javaLogo} Language="Java" />
-                    {/* Removed PHP, Ruby, Swift */}
+                    <TechStackIcon TechStackIcon={cLogo} Language="C" style={{ width: 38, height: 38 }} />
+                    <TechStackIcon TechStackIcon={javaLogo} Language="Java" style={{ width: 38, height: 38 }} />
+                    {/* Removed C++ and its icon */}
                   </div>
                 </div>
               </div>
