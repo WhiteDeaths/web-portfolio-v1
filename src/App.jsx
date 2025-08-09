@@ -10,6 +10,7 @@ import Particles from './Particles';
 import SpotlightCard from './SpotlightCard';
 import Loader from './Loader';
 import SectionTabs from './SectionTabs';
+import SocialIcons from './SocialIcons';
 import { useState, useEffect } from 'react';
 
 function App() {
