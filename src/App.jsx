@@ -51,8 +51,9 @@ function App() {
               />
             </h1>
           </div>
-          <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ flex: 1, minWidth: 320, maxWidth: 410 }}>
+          {/* About Me SpotlightCard */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <section id="about" className={styles.aboutMe} style={{ background: 'none', boxShadow: 'none', margin: 0, padding: 0 }}>
                 <h1>About Me</h1>
                 <p>
@@ -61,13 +62,10 @@ function App() {
                 <button className={styles.aboutMeButton}>Learn More</button>
               </section>
             </SpotlightCard>
-            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ flex: 1, minWidth: 320, maxWidth: 410 }}>
-              <div id="projects">
-                <h1>Projects</h1>
-                <p>Showcase your projects or highlights here.</p>
-              </div>
-            </SpotlightCard>
-            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ flex: 1, minWidth: 320, maxWidth: 410 }}>
+          </div>
+          {/* Languages I Know SpotlightCard */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="languages">
                 <h1>Languages I Know</h1>
                 <div className={styles.languages}>
@@ -128,6 +126,15 @@ function App() {
                     displayOverlayContent={false}
                   />
                 </div>
+              </div>
+            </SpotlightCard>
+          </div>
+          {/* Projects SpotlightCard */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
+              <div id="projects">
+                <h1>Projects</h1>
+                <p>Showcase your projects or highlights here.</p>
               </div>
             </SpotlightCard>
           </div>
