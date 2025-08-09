@@ -1,0 +1,35 @@
+# Visual Studio Code
+.vscode/
+.vscode-test/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Environment variables
+.env
+
+# Optional: Operating System generated files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+dist-ssr/
+
+# Logs
+logs
+*.log
+lerna-debug.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
