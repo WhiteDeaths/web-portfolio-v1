@@ -1,0 +1,30 @@
+.section-tabs {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  gap: 12px;
+  background: rgba(30, 34, 54, 0.85);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  padding: 0.5rem 1.2rem;
+  z-index: 10001;
+}
+
+.section-tab-btn {
+  background: none;
+  border: none;
+  color: #a259ff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.section-tab-btn:hover,
+.section-tab-btn:focus {
+  background: linear-gradient(90deg, #a259ff 60%, #6d28d9 100%);
+  color: #fff;
+}

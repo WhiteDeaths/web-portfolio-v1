@@ -1,0 +1,46 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.7s cubic-bezier(.4,2,.6,1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.loader-fade {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-svg {
+  animation: loader-spin 1.2s linear infinite;
+}
+
+@keyframes loader-spin {
+  100% { transform: rotate(360deg); }
+}
+
+.loader-bg {
+  stroke: #222;
+  opacity: 0.2;
+}
+
+.loader-fg {
+  stroke: #a259ff;
+  stroke-dasharray: 180 100;
+  stroke-linecap: round;
+  animation: loader-dash 1.2s ease-in-out infinite;
+}
+
+@keyframes loader-dash {
+  0% { stroke-dasharray: 1 279; stroke-dashoffset: 0; }
+  50% { stroke-dasharray: 180 100; stroke-dashoffset: -30px; }
+  100% { stroke-dasharray: 1 279; stroke-dashoffset: -280px; }
+}

@@ -8,121 +8,134 @@ import TextType from './TextType';
 import TiltedCard from './TiltedCard';
 import Particles from './Particles';
 import SpotlightCard from './SpotlightCard';
+import Loader from './Loader';
+import SectionTabs from './SectionTabs';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: '#000' }}>
-      {/* Particles background at the top */}
-e typing affect       <div style={{ width: '100%', height: '600px', position: 'relative' }}>
-        <Particles
-          particleColors={['#ffffff', '#ffffff']}
-          particleCount={200}
-          particleSpread={10}
-          speed={0.1}
-          particleBaseSize={100}
-          moveParticlesOnHover={true}
-          alphaParticles={false}
-          disableRotation={false}
-        />
-      </div>
-      <div className={styles.container} style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}>
-          <h1 className={styles.aboutMe} style={{ background: 'none', boxShadow: 'none', marginBottom: 0, padding: 0 }}>
-            <TextType
-              text={["Welcome To My Portfolio!"]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor={true}
-              cursorCharacter="|"
-              cursorBlinkDuration={0.7}
-            />
-          </h1>
+    <>
+      {loading && <Loader />}
+      <SectionTabs />
+      <SocialIcons />
+      <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: '#000', filter: loading ? 'blur(2px)' : 'none', pointerEvents: loading ? 'none' : 'auto' }}>
+        {/* Particles background at the top */}
+        <div style={{ width: '100%', height: '350px', position: 'relative' }}>
+          <Particles
+            particleColors={['#ffffff', '#ffffff']}
+            particleCount={400}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
         </div>
-        <section className={styles.aboutMe}>
+        <div className={styles.container} style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}>
+            <h1 className={styles.aboutMe} style={{ background: 'none', boxShadow: 'none', marginBottom: 0, padding: 0 }}>
+              <TextType
+                text={["Welcome To My Portfolio!"]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={true}
+                cursorCharacter="|"
+                cursorBlinkDuration={0.7}
+              />
+            </h1>
+          </div>
+          <section id="about" className={styles.aboutMe}>
           <h1>About Me</h1>
           <p>
-            Hi, I'm James Upson, a passionate full stack developer with experience in building modern, interactive web applications as well as accounting software. I love creating user-friendly interfaces as well as developing side projects when I need something to help with my work.
+          Hi, I'm James Upson, a passionate full stack developer with experience in building modern, interactive web applications as well as accounting software. I love creating user-friendly interfaces as well as developing side projects when I need something to help with my work.
           </p>
           <button className={styles.aboutMeButton}>Learn More</button>
-        </section>
-        {/* Spotlight Cards Row */}
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch', gap: '24px', margin: '2.5rem 0' }}>
-          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-            <h2>Project One</h2>
-            <p>Showcase your first project or highlight here.</p>
-          </SpotlightCard>
-          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-            <h2>Project Two</h2>
-            <p>Showcase your second project or highlight here.</p>
-          </SpotlightCard>
-          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-            <h2>Project Three</h2>
-            <p>Showcase your third project or highlight here.</p>
-          </SpotlightCard>
-        </div>
-                <section>
+          </section>
+          {/* Spotlight Cards Row */}
+          <div id="projects" style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch', gap: '24px', margin: '2.5rem 0' }}>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)">
+              <h2>Project One</h2>
+              <p>Showcase your first project or highlight here.</p>
+            </SpotlightCard>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)">
+              <h2>Project Two</h2>
+              <p>Showcase your second project or highlight here.</p>
+            </SpotlightCard>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)">
+              <h2>Project Three</h2>
+              <p>Showcase your third project or highlight here.</p>
+            </SpotlightCard>
+          </div>
+          <section id="languages">
           <div className={styles.languagesTitle}>Languages I Know</div>
           <div className={styles.languages}>
-            <TiltedCard
-              imageSrc={jsLogo}
-              altText="JavaScript"
-              captionText="JavaScript"
-              containerHeight="64px"
-              containerWidth="64px"
-              imageHeight="64px"
-              imageWidth="64px"
-              rotateAmplitude={12}
-              scaleOnHover={1.18}
-              showMobileWarning={false}
-              showTooltip={true}
-              displayOverlayContent={false}
-            />
-            <TiltedCard
-              imageSrc={reactLogo}
-              altText="React"
-              captionText="React"
-              containerHeight="64px"
-              containerWidth="64px"
-              imageHeight="56px"
-              imageWidth="56px"
-              rotateAmplitude={12}
-              scaleOnHover={1.18}
-              showMobileWarning={false}
-              showTooltip={true}
-              displayOverlayContent={false}
-            />
-            <TiltedCard
-              imageSrc={cssLogo}
-              altText="CSS"
-              captionText="CSS"
-              containerHeight="64px"
-              containerWidth="64px"
-              imageHeight="64px"
-              imageWidth="64px"
-              rotateAmplitude={12}
-              scaleOnHover={1.18}
-              showMobileWarning={false}
-              showTooltip={true}
-              displayOverlayContent={false}
-            />
-            <TiltedCard
-              imageSrc={htmlLogo}
-              altText="HTML"
-              captionText="HTML"
-              containerHeight="64px"
-              containerWidth="64px"
-              imageHeight="64px"
-              imageWidth="64px"
-              rotateAmplitude={12}
-              scaleOnHover={1.18}
-              showMobileWarning={false}
-              showTooltip={true}
-              displayOverlayContent={false}
-            />
-          </div>
-        </section>
+              <TiltedCard
+                imageSrc={jsLogo}
+                altText="JavaScript"
+                captionText="JavaScript"
+                containerHeight="64px"
+                containerWidth="64px"
+                imageHeight="64px"
+                imageWidth="64px"
+                rotateAmplitude={12}
+                scaleOnHover={1.18}
+                showMobileWarning={false}
+                showTooltip={true}
+                displayOverlayContent={false}
+              />
+              <TiltedCard
+                imageSrc={reactLogo}
+                altText="React"
+                captionText="React"
+                containerHeight="64px"
+                containerWidth="64px"
+                imageHeight="56px"
+                imageWidth="56px"
+                rotateAmplitude={12}
+                scaleOnHover={1.18}
+                showMobileWarning={false}
+                showTooltip={true}
+                displayOverlayContent={false}
+              />
+              <TiltedCard
+                imageSrc={cssLogo}
+                altText="CSS"
+                captionText="CSS"
+                containerHeight="64px"
+                containerWidth="64px"
+                imageHeight="64px"
+                imageWidth="64px"
+                rotateAmplitude={12}
+                scaleOnHover={1.18}
+                showMobileWarning={false}
+                showTooltip={true}
+                displayOverlayContent={false}
+              />
+              <TiltedCard
+                imageSrc={htmlLogo}
+                altText="HTML"
+                captionText="HTML"
+                containerHeight="64px"
+                containerWidth="64px"
+                imageHeight="64px"
+                imageWidth="64px"
+                rotateAmplitude={12}
+                scaleOnHover={1.18}
+                showMobileWarning={false}
+                showTooltip={true}
+                displayOverlayContent={false}
+              />
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
