@@ -13,6 +13,13 @@ import SectionTabs from './SectionTabs';
 import SocialIcons from './SocialIcons';
 import { useState, useEffect } from 'react';
 
+const sectionTabs = [
+  { id: 'about', label: 'About' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'languages', label: 'Languages' },
+  { id: 'contact', label: 'Contact' },
+];
+
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -22,9 +29,9 @@ function App() {
   return (
     <>
       {loading && <Loader />}
-      <SectionTabs />
+      <SectionTabs tabs={sectionTabs} />
       <SocialIcons />
-      <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: '#000', filter: loading ? 'blur(2px)' : 'none', pointerEvents: loading ? 'none' : 'auto' }}>
+      <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: '#11034f', filter: loading ? 'blur(2px)' : 'none', pointerEvents: loading ? 'none' : 'auto' }}>
         {/* Particles background at the top */}
         <div style={{ width: '100%', height: '350px', position: 'relative' }}>
           <Particles
@@ -67,7 +74,7 @@ function App() {
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="languages">
-                <h1>Languages I Know</h1>
+                <h1 style={{ textAlign: 'center', width: '100%' }}>Languages I Know</h1>
                 <div className={styles.languages}>
                   <TiltedCard
                     imageSrc={jsLogo}
@@ -80,7 +87,7 @@ function App() {
                     rotateAmplitude={12}
                     scaleOnHover={1.18}
                     showMobileWarning={false}
-                    showTooltip={true}
+                    showTooltip={false}
                     displayOverlayContent={false}
                   />
                   <TiltedCard
@@ -94,7 +101,7 @@ function App() {
                     rotateAmplitude={12}
                     scaleOnHover={1.18}
                     showMobileWarning={false}
-                    showTooltip={true}
+                    showTooltip={false}
                     displayOverlayContent={false}
                   />
                   <TiltedCard
@@ -108,7 +115,7 @@ function App() {
                     rotateAmplitude={12}
                     scaleOnHover={1.18}
                     showMobileWarning={false}
-                    showTooltip={true}
+                    showTooltip={false}
                     displayOverlayContent={false}
                   />
                   <TiltedCard
@@ -122,7 +129,7 @@ function App() {
                     rotateAmplitude={12}
                     scaleOnHover={1.18}
                     showMobileWarning={false}
-                    showTooltip={true}
+                    showTooltip={false}
                     displayOverlayContent={false}
                   />
                 </div>
@@ -133,14 +140,14 @@ function App() {
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="projects">
-                <h1>Projects</h1>
+                <h1 style={{ textAlign: 'center', width: '100%' }}>Projects</h1>
                 <p>Showcase your projects or highlights here.</p>
               </div>
             </SpotlightCard>
           </div>
           {/* Contact Cards Row */}
           <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', margin: '2.5rem 0' }}>
-            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
+            <SpotlightCard id="contact" className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
               <h2>Contact Me</h2>
               <p>Email: <a href="mailto:your@email.com" style={{ color: '#a259ff' }}>your@email.com</a></p>
               <p>LinkedIn: <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>linkedin.com</a></p>
