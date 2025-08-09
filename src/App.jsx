@@ -15,9 +15,10 @@ function App() {
           <p>
             Hi, I'm James Upson, a passionate full stack developer with experience in building modern, interactive web applications as well as accounting software. I love creating user-friendly interfaces as well as developing side projects when I need something to help with my work.
           </p>
+          <button className={styles.aboutMeButton}>Learn More</button>
         </section>
         <section>
-          <h2>Languages I Know</h2>
+          <div className={styles.languagesTitle}>Languages I Know</div>
           <div className={styles.languages}>
             <div className={styles.languageIcon} title="JavaScript">
               <img src={jsLogo} alt="JavaScript" width="40" height="40" />
