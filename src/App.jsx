@@ -22,7 +22,6 @@ import Loader from './Loader';
 import SectionTabs from './SectionTabs';
 import SocialIcons from './SocialIcons';
 import AnimatedBackground from './AnimatedBackground';
-import WelcomeScreen from './WelcomeScreen';
 import { useState, useEffect } from 'react';
 
 const sectionTabs = [
@@ -35,19 +34,12 @@ const sectionTabs = [
 ];
 
 function App() {
-  const [showWelcome, setShowWelcome] = useState(true);
-  useEffect(() => {
-    if (!showWelcome) return;
-    const timer = setTimeout(() => setShowWelcome(false), 5000);
-    return () => clearTimeout(timer);
-  }, [showWelcome]);
   return (
     <>
-      {showWelcome && <WelcomeScreen onLoadingComplete={() => setShowWelcome(false)} />}
       <AnimatedBackground />
       <SectionTabs tabs={sectionTabs} />
       <SocialIcons />
-      <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: 'transparent', filter: showWelcome ? 'blur(2px)' : 'none', pointerEvents: showWelcome ? 'none' : 'auto' }}>
+      <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: 'transparent' }}>
         {/* Particles background at the top */}
         <div style={{ width: '100%', height: '350px', position: 'relative' }}>
           <Particles
