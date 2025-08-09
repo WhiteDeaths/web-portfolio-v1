@@ -107,19 +107,19 @@ function App() {
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="projects">
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Projects</h1>
-                <p>Showcase your projects or highlights here.</p>
+                <p>Current projects completed: 8</p>
               </div>
             </SpotlightCard>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="certificates">
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Certificates</h1>
-                <p>Showcase your certificates here.</p>
+                <p>Certifications Achieved: 3</p>
               </div>
             </SpotlightCard>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="experience">
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Years of Experience</h1>
-                <p>Showcase your experience here.</p>
+                <p>Years Of Experience: 1</p>
               </div>
             </SpotlightCard>
           </div>
@@ -127,7 +127,7 @@ function App() {
           <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', margin: '2.5rem 0' }}>
             <SpotlightCard id="contact" className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
               <h2>Contact Me</h2>
-              <p>Email: <a href="mailto:your@email.com" style={{ color: '#a259ff' }}>your@email.com</a></p>
+              <p>Email: <a href="mailto:upsonjames1@gmail.com" style={{ color: '#a259ff' }}>upsonjames1@gmail.com</a></p>
               <p>LinkedIn: <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>linkedin.com</a></p>
             </SpotlightCard>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
