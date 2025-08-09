@@ -1,15 +1,15 @@
 
 .container {
+  height: 100vh;
   width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   color: #fff;
   position: relative;
   z-index: 1;
-  padding-bottom: 4rem;
+  scroll-snap-align: start;
 }
 
 .sectionsWrapper {
@@ -28,16 +28,16 @@
   align-items: center;
   justify-content: center;
   scroll-snap-align: start;
-  transition: background 0.5s, box-shadow 0.5s;
+  transition:  0.5s, box-shadow 0.5s;
 }
 
 .aboutMe {
   background: rgba(30, 34, 54, 0.85);
-  padding: 1.5rem 1.8rem;
-  border-radius: 1.2rem;
+  padding: 2rem 2.5rem;
+  border-radius: 1.5rem;
   box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25);
-  margin-bottom: 2.2rem;
-  max-width: 410px;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
   text-align: center;
 }
 
@@ -52,7 +52,7 @@
   box-shadow: 0 2px 16px 0 #a259ff55;
   cursor: pointer;
   margin-top: 1.5rem;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  transition: 0.2s, box-shadow 0.2s, transform 0.1s;
 }
 
 .aboutMeButton:hover {
@@ -77,32 +77,10 @@
   border-radius: 1rem;
   background: rgba(255,255,255,0.08);
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15);
-  transition: box-shadow 0.2s, filter 0.2s, transform 0.2s, background 0.2s;
+  transition: box-shadow 0.2s, filter 0.2s, transform 0.2s, 0.2s;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  --mouse-x: 50%;
-  --mouse-y: 50%;
-  --spotlight-color: rgba(162, 89, 255, 0.25);
-}
-
-.languageIcon::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.languageIcon:hover::before,
-.languageIcon:focus-within::before {
-  opacity: 0.7;
 }
 
 .languageIcon:hover {
@@ -215,7 +193,7 @@
   font-size: 1rem;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
   outline: none;
-  transition: background 0.2s, box-shadow 0.2s;
+  transition: 0.2s, box-shadow 0.2s;
 }
 
 .inputGroup input:focus {
@@ -236,7 +214,7 @@
   border-radius: 1rem;
   box-shadow: 0 2px 16px 0 #a259ff55;
   cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  transition: 0.2s, box-shadow 0.2s, transform 0.1s;
   position: relative;
   overflow: hidden;
 }

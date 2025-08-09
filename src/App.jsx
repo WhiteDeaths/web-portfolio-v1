@@ -21,8 +21,6 @@ import { useState, useEffect } from 'react';
 const sectionTabs = [
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
-  { id: 'certificates', label: 'Certificates' },
-  { id: 'experience', label: 'Experience' },
   { id: 'languages', label: 'Languages' },
   { id: 'contact', label: 'Contact' },
 ];
