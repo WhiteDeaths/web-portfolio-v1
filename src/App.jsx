@@ -5,15 +5,15 @@ import jsLogo from './assets/js.svg';
 import cssLogo from './assets/css.svg';
 import htmlLogo from './assets/html.svg';
 import TextType from './TextType';
-import MagicBento from './MagicBento';
 import TiltedCard from './TiltedCard';
 import Particles from './Particles';
+import SpotlightCard from './SpotlightCard';
 
 function App() {
   return (
     <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: '#000' }}>
       {/* Particles background at the top */}
-      <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+e typing affect       <div style={{ width: '100%', height: '600px', position: 'relative' }}>
         <Particles
           particleColors={['#ffffff', '#ffffff']}
           particleCount={200}
@@ -34,7 +34,7 @@ function App() {
               pauseDuration={1500}
               showCursor={true}
               cursorCharacter="|"
-              cursorBlinkDuration={0.3}
+              cursorBlinkDuration={0.7}
             />
           </h1>
         </div>
@@ -45,21 +45,22 @@ function App() {
           </p>
           <button className={styles.aboutMeButton}>Learn More</button>
         </section>
-        <div style={{ marginTop: '2.5rem' }}>
-          <MagicBento
-            textAutoHide={true}
-            enableStars={true}
-            enableSpotlight={true}
-            enableBorderGlow={true}
-            enableTilt={true}
-            enableMagnetism={true}
-            clickEffect={true}
-            spotlightRadius={300}
-            particleCount={12}
-            glowColor="132, 0, 255"
-          />
+        {/* Spotlight Cards Row */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch', gap: '24px', margin: '2.5rem 0' }}>
+          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+            <h2>Project One</h2>
+            <p>Showcase your first project or highlight here.</p>
+          </SpotlightCard>
+          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+            <h2>Project Two</h2>
+            <p>Showcase your second project or highlight here.</p>
+          </SpotlightCard>
+          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+            <h2>Project Three</h2>
+            <p>Showcase your third project or highlight here.</p>
+          </SpotlightCard>
         </div>
-        <section>
+                <section>
           <div className={styles.languagesTitle}>Languages I Know</div>
           <div className={styles.languages}>
             <TiltedCard
