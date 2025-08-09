@@ -4,6 +4,16 @@ import viteLogo from '/vite.svg';
 import jsLogo from './assets/js.svg';
 import cssLogo from './assets/css.svg';
 import htmlLogo from './assets/html.svg';
+import typescriptLogo from './assets/typescript.svg';
+import pythonLogo from './assets/python.svg';
+import nodejsLogo from './assets/nodejs.svg';
+import cLogo from './assets/c.svg';
+import cppLogo from './assets/cpp.svg';
+import javaLogo from './assets/java.svg';
+import goLogo from './assets/go.svg';
+import phpLogo from './assets/php.svg';
+import rubyLogo from './assets/ruby.svg';
+import swiftLogo from './assets/swift.svg';
 import TextType from './TextType';
 import TechStackIcon from './TechStackIcon';
 import Particles from './Particles';
@@ -86,16 +96,16 @@ function App() {
                   <TechStackIcon TechStackIcon={reactLogo} Language="React" />
                   <TechStackIcon TechStackIcon={cssLogo} Language="CSS" />
                   <TechStackIcon TechStackIcon={htmlLogo} Language="HTML" />
-                  <TechStackIcon TechStackIcon={require('./assets/typescript.svg')} Language="TypeScript" />
-                  <TechStackIcon TechStackIcon={require('./assets/python.svg')} Language="Python" />
-                  <TechStackIcon TechStackIcon={require('./assets/nodejs.svg')} Language="Node.js" />
-                  <TechStackIcon TechStackIcon={require('./assets/c.svg')} Language="C" />
-                  <TechStackIcon TechStackIcon={require('./assets/cpp.svg')} Language="C++" />
-                  <TechStackIcon TechStackIcon={require('./assets/java.svg')} Language="Java" />
-                  <TechStackIcon TechStackIcon={require('./assets/go.svg')} Language="Go" />
-                  <TechStackIcon TechStackIcon={require('./assets/php.svg')} Language="PHP" />
-                  <TechStackIcon TechStackIcon={require('./assets/ruby.svg')} Language="Ruby" />
-                  <TechStackIcon TechStackIcon={require('./assets/swift.svg')} Language="Swift" />
+                  <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" />
+                  <TechStackIcon TechStackIcon={pythonLogo} Language="Python" />
+                  <TechStackIcon TechStackIcon={nodejsLogo} Language="Node.js" />
+                  <TechStackIcon TechStackIcon={cLogo} Language="C" />
+                  <TechStackIcon TechStackIcon={cppLogo} Language="C++" />
+                  <TechStackIcon TechStackIcon={javaLogo} Language="Java" />
+                  <TechStackIcon TechStackIcon={goLogo} Language="Go" />
+                  <TechStackIcon TechStackIcon={phpLogo} Language="PHP" />
+                  <TechStackIcon TechStackIcon={rubyLogo} Language="Ruby" />
+                  <TechStackIcon TechStackIcon={swiftLogo} Language="Swift" />
                 </div>
               </div>
             </SpotlightCard>
