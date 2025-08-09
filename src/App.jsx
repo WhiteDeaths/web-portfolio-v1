@@ -7,12 +7,25 @@ import htmlLogo from './assets/html.svg';
 import TextType from './TextType';
 import MagicBento from './MagicBento';
 import TiltedCard from './TiltedCard';
+import Particles from './Particles';
 
 function App() {
   return (
-    <div className={styles.darkVeilBackground}>
-      <div className={styles.darkVeilOverlay}></div>
-      <div className={styles.container}>
+    <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: '#000' }}>
+      {/* Particles background at the top */}
+      <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+        <Particles
+          particleColors={['#ffffff', '#ffffff']}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
+      <div className={styles.container} style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}>
           <h1 className={styles.aboutMe} style={{ background: 'none', boxShadow: 'none', marginBottom: 0, padding: 0 }}>
             <TextType
@@ -45,27 +58,6 @@ function App() {
             glowColor="132, 0, 255"
           />
         </div>
-        <div style={{ margin: '2.5rem auto', display: 'flex', justifyContent: 'center' }}>
-          <TiltedCard
-            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-            altText="Kendrick Lamar - GNX Album Cover"
-            captionText="Kendrick Lamar - GNX"
-            containerHeight="300px"
-            containerWidth="300px"
-            imageHeight="300px"
-            imageWidth="300px"
-            rotateAmplitude={12}
-            scaleOnHover={1.2}
-            showMobileWarning={false}
-            showTooltip={true}
-            displayOverlayContent={true}
-            overlayContent={
-              <p className="tilted-card-demo-text">
-                Kendrick Lamar - GNX
-              </p>
-            }
-          />
-        </div>
         <section>
           <div className={styles.languagesTitle}>Languages I Know</div>
           <div className={styles.languages}>
@@ -89,8 +81,8 @@ function App() {
               captionText="React"
               containerHeight="64px"
               containerWidth="64px"
-              imageHeight="64px"
-              imageWidth="64px"
+              imageHeight="56px"
+              imageWidth="56px"
               rotateAmplitude={12}
               scaleOnHover={1.18}
               showMobileWarning={false}
