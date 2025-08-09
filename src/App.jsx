@@ -125,11 +125,13 @@ function App() {
           </div>
           {/* Contact Cards Row */}
           <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', margin: '2.5rem 0' }}>
-            <SpotlightCard id="contact" className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
-              <h2>Contact Me</h2>
-              <p>Email: <a href="mailto:upsonjames1@gmail.com" style={{ color: '#a259ff' }}>upsonjames1@gmail.com</a></p>
-              <p>LinkedIn: <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>linkedin.com</a></p>
-            </SpotlightCard>
+            <div id="contact">
+              <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
+                <h2>Contact Me</h2>
+                <p>Email: <a href="mailto:upsonjames1@gmail.com" style={{ color: '#a259ff' }}>upsonjames1@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>linkedin.com</a></p>
+              </SpotlightCard>
+            </div>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
               <h2>Let's Connect</h2>
               <p>Instagram: <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>instagram.com</a></p>
