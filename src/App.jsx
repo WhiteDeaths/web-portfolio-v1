@@ -87,8 +87,8 @@ function App() {
                   <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
                     <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" />
                     <TechStackIcon TechStackIcon={reactLogo} Language="React" style={{ width: 38, height: 38 }} />
-                    <TechStackIcon TechStackIcon={cssLogo} Language="CSS" />
-                    <TechStackIcon TechStackIcon={htmlLogo} Language="HTML" />
+                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" Language="CSS" />
+                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" Language="HTML" />
                     <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" />
                     <TechStackIcon TechStackIcon={pythonLogo} Language="Python" />
                     <TechStackIcon TechStackIcon={nodejsLogo} Language="Node.js" />
@@ -97,9 +97,7 @@ function App() {
                     <TechStackIcon TechStackIcon={cLogo} Language="C" />
                     <TechStackIcon TechStackIcon={cppLogo} Language="C++" />
                     <TechStackIcon TechStackIcon={javaLogo} Language="Java" />
-                    <TechStackIcon TechStackIcon={phpLogo} Language="PHP" />
-                    <TechStackIcon TechStackIcon={rubyLogo} Language="Ruby" />
-                    <TechStackIcon TechStackIcon={swiftLogo} Language="Swift" />
+                    {/* Removed PHP, Ruby, Swift */}
                   </div>
                 </div>
               </div>
