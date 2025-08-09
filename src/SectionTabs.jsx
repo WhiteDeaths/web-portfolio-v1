@@ -18,13 +18,6 @@ export default function SectionTabs({ tabs }) {
           {section.label}
         </button>
       ))}
-      <button
-        className="section-tab-btn"
-        onClick={() => handleClick('contact')}
-        style={{ background: 'linear-gradient(90deg, #a259ff 60%, #6d28d9 100%)', color: '#fff', marginLeft: 8 }}
-      >
-        Connect
-      </button>
     </nav>
   );
 }
