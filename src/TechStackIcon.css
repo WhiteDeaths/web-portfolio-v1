@@ -1,0 +1,51 @@
+.techstack-group {
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background: rgba(30, 41, 59, 0.5);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15);
+  position: relative;
+}
+.techstack-group:hover {
+  background: rgba(30, 41, 59, 0.7);
+  transform: scale(1.05);
+  box-shadow: 0 4px 24px 0 #a259ff55;
+}
+.techstack-icon-bg {
+  position: absolute;
+  inset: -0.25rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #3b82f6 0%, #a259ff 100%);
+  opacity: 0;
+  filter: blur(16px);
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+.techstack-group:hover .techstack-icon-bg {
+  opacity: 0.5;
+}
+.techstack-img {
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+.techstack-label {
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  margin-top: 0.5rem;
+  z-index: 1;
+  transition: color 0.3s;
+}
+.techstack-group:hover .techstack-label {
+  color: #fff;
+}

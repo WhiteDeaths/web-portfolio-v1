@@ -5,33 +5,39 @@ import jsLogo from './assets/js.svg';
 import cssLogo from './assets/css.svg';
 import htmlLogo from './assets/html.svg';
 import TextType from './TextType';
-import TiltedCard from './TiltedCard';
+import TechStackIcon from './TechStackIcon';
 import Particles from './Particles';
 import SpotlightCard from './SpotlightCard';
 import Loader from './Loader';
 import SectionTabs from './SectionTabs';
 import SocialIcons from './SocialIcons';
+import AnimatedBackground from './AnimatedBackground';
+import WelcomeScreen from './WelcomeScreen';
 import { useState, useEffect } from 'react';
 
 const sectionTabs = [
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
+  { id: 'certificates', label: 'Certificates' },
+  { id: 'experience', label: 'Experience' },
   { id: 'languages', label: 'Languages' },
   { id: 'contact', label: 'Contact' },
 ];
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [showWelcome, setShowWelcome] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1200);
+    if (!showWelcome) return;
+    const timer = setTimeout(() => setShowWelcome(false), 5000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [showWelcome]);
   return (
     <>
-      {loading && <Loader />}
+      {showWelcome && <WelcomeScreen onLoadingComplete={() => setShowWelcome(false)} />}
+      <AnimatedBackground />
       <SectionTabs tabs={sectionTabs} />
       <SocialIcons />
-      <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: '#11034f', filter: loading ? 'blur(2px)' : 'none', pointerEvents: loading ? 'none' : 'auto' }}>
+      <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', overflow: 'hidden', background: 'transparent', filter: showWelcome ? 'blur(2px)' : 'none', pointerEvents: showWelcome ? 'none' : 'auto' }}>
         {/* Particles background at the top */}
         <div style={{ width: '100%', height: '350px', position: 'relative' }}>
           <Particles
@@ -76,72 +82,42 @@ function App() {
               <div id="languages">
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Languages I Know</h1>
                 <div className={styles.languages}>
-                  <TiltedCard
-                    imageSrc={jsLogo}
-                    altText="JavaScript"
-                    captionText="JavaScript"
-                    containerHeight="64px"
-                    containerWidth="64px"
-                    imageHeight="64px"
-                    imageWidth="64px"
-                    rotateAmplitude={12}
-                    scaleOnHover={1.18}
-                    showMobileWarning={false}
-                    showTooltip={false}
-                    displayOverlayContent={false}
-                  />
-                  <TiltedCard
-                    imageSrc={reactLogo}
-                    altText="React"
-                    captionText="React"
-                    containerHeight="64px"
-                    containerWidth="64px"
-                    imageHeight="56px"
-                    imageWidth="56px"
-                    rotateAmplitude={12}
-                    scaleOnHover={1.18}
-                    showMobileWarning={false}
-                    showTooltip={false}
-                    displayOverlayContent={false}
-                  />
-                  <TiltedCard
-                    imageSrc={cssLogo}
-                    altText="CSS"
-                    captionText="CSS"
-                    containerHeight="64px"
-                    containerWidth="64px"
-                    imageHeight="64px"
-                    imageWidth="64px"
-                    rotateAmplitude={12}
-                    scaleOnHover={1.18}
-                    showMobileWarning={false}
-                    showTooltip={false}
-                    displayOverlayContent={false}
-                  />
-                  <TiltedCard
-                    imageSrc={htmlLogo}
-                    altText="HTML"
-                    captionText="HTML"
-                    containerHeight="64px"
-                    containerWidth="64px"
-                    imageHeight="64px"
-                    imageWidth="64px"
-                    rotateAmplitude={12}
-                    scaleOnHover={1.18}
-                    showMobileWarning={false}
-                    showTooltip={false}
-                    displayOverlayContent={false}
-                  />
+                  <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" />
+                  <TechStackIcon TechStackIcon={reactLogo} Language="React" />
+                  <TechStackIcon TechStackIcon={cssLogo} Language="CSS" />
+                  <TechStackIcon TechStackIcon={htmlLogo} Language="HTML" />
+                  <TechStackIcon TechStackIcon={require('./assets/typescript.svg')} Language="TypeScript" />
+                  <TechStackIcon TechStackIcon={require('./assets/python.svg')} Language="Python" />
+                  <TechStackIcon TechStackIcon={require('./assets/nodejs.svg')} Language="Node.js" />
+                  <TechStackIcon TechStackIcon={require('./assets/c.svg')} Language="C" />
+                  <TechStackIcon TechStackIcon={require('./assets/cpp.svg')} Language="C++" />
+                  <TechStackIcon TechStackIcon={require('./assets/java.svg')} Language="Java" />
+                  <TechStackIcon TechStackIcon={require('./assets/go.svg')} Language="Go" />
+                  <TechStackIcon TechStackIcon={require('./assets/php.svg')} Language="PHP" />
+                  <TechStackIcon TechStackIcon={require('./assets/ruby.svg')} Language="Ruby" />
+                  <TechStackIcon TechStackIcon={require('./assets/swift.svg')} Language="Swift" />
                 </div>
               </div>
             </SpotlightCard>
           </div>
-          {/* Projects SpotlightCard */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
+          {/* Projects, Certificates, Experience SpotlightCards */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="projects">
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Projects</h1>
                 <p>Showcase your projects or highlights here.</p>
+              </div>
+            </SpotlightCard>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
+              <div id="certificates">
+                <h1 style={{ textAlign: 'center', width: '100%' }}>Certificates</h1>
+                <p>Showcase your certificates here.</p>
+              </div>
+            </SpotlightCard>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
+              <div id="experience">
+                <h1 style={{ textAlign: 'center', width: '100%' }}>Years of Experience</h1>
+                <p>Showcase your experience here.</p>
               </div>
             </SpotlightCard>
           </div>

@@ -1,0 +1,58 @@
+.animated-bg-root {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.animated-bg-blobs {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.animated-bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(128px);
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+  width: 24rem;
+  height: 24rem;
+  transition: opacity 0.3s;
+}
+.animated-bg-blob.purple {
+  top: 0;
+  left: -1rem;
+  background: #a259ff;
+}
+.animated-bg-blob.cyan {
+  top: 0;
+  right: -1rem;
+  background: #00e5ff;
+}
+.animated-bg-blob.blue.left {
+  bottom: -2rem;
+  left: 20px;
+  background: #3b82f6;
+}
+.animated-bg-blob.blue.right {
+  bottom: -2.5rem;
+  right: 5rem;
+  background: #3b82f6;
+  opacity: 0.2;
+}
+@media (max-width: 640px) {
+  .hide-sm { display: none; }
+}
+.animated-bg-grid {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right,#4f4f4f10 1px,transparent 1px),
+    linear-gradient(to bottom,#4f4f4f10 1px,transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}

@@ -1,12 +1,6 @@
 import './SectionTabs.css';
 
-const sections = [
-  { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'languages', label: 'Languages' },
-];
-
-export default function SectionTabs() {
+export default function SectionTabs({ tabs }) {
   const handleClick = (id) => {
     const el = document.getElementById(id);
     if (el) {
@@ -15,7 +9,7 @@ export default function SectionTabs() {
   };
   return (
     <nav className="section-tabs">
-      {sections.map((section) => (
+      {tabs.map((section) => (
         <button
           key={section.id}
           className="section-tab-btn"
@@ -24,6 +18,13 @@ export default function SectionTabs() {
           {section.label}
         </button>
       ))}
+      <button
+        className="section-tab-btn"
+        onClick={() => handleClick('contact')}
+        style={{ background: 'linear-gradient(90deg, #a259ff 60%, #6d28d9 100%)', color: '#fff', marginLeft: 8 }}
+      >
+        Connect
+      </button>
     </nav>
   );
 }
