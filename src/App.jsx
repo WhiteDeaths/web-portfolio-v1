@@ -51,89 +51,99 @@ function App() {
               />
             </h1>
           </div>
-          <section id="about" className={styles.aboutMe}>
-          <h1>About Me</h1>
-          <p>
-          Hi, I'm James Upson, a passionate full stack developer with experience in building modern, interactive web applications as well as accounting software. I love creating user-friendly interfaces as well as developing side projects when I need something to help with my work.
-          </p>
-          <button className={styles.aboutMeButton}>Learn More</button>
-          </section>
-          {/* Spotlight Cards Row */}
-          <div id="projects" style={{ display: 'flex', justifyContent: 'center', alignItems: 'stretch', gap: '24px', margin: '2.5rem 0' }}>
-            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)">
-              <h2>Project One</h2>
-              <p>Showcase your first project or highlight here.</p>
+          <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ flex: 1, minWidth: 320, maxWidth: 410 }}>
+              <section id="about" className={styles.aboutMe} style={{ background: 'none', boxShadow: 'none', margin: 0, padding: 0 }}>
+                <h1>About Me</h1>
+                <p>
+                  Hi, I'm James Upson, a passionate full stack developer with experience in building modern, interactive web applications as well as accounting software. I love creating user-friendly interfaces as well as developing side projects when I need something to help with my work.
+                </p>
+                <button className={styles.aboutMeButton}>Learn More</button>
+              </section>
             </SpotlightCard>
-            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)">
-              <h2>Project Two</h2>
-              <p>Showcase your second project or highlight here.</p>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ flex: 1, minWidth: 320, maxWidth: 410 }}>
+              <div id="projects">
+                <h1>Projects</h1>
+                <p>Showcase your projects or highlights here.</p>
+              </div>
             </SpotlightCard>
-            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)">
-              <h2>Project Three</h2>
-              <p>Showcase your third project or highlight here.</p>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ flex: 1, minWidth: 320, maxWidth: 410 }}>
+              <div id="languages">
+                <h1>Languages I Know</h1>
+                <div className={styles.languages}>
+                  <TiltedCard
+                    imageSrc={jsLogo}
+                    altText="JavaScript"
+                    captionText="JavaScript"
+                    containerHeight="64px"
+                    containerWidth="64px"
+                    imageHeight="64px"
+                    imageWidth="64px"
+                    rotateAmplitude={12}
+                    scaleOnHover={1.18}
+                    showMobileWarning={false}
+                    showTooltip={true}
+                    displayOverlayContent={false}
+                  />
+                  <TiltedCard
+                    imageSrc={reactLogo}
+                    altText="React"
+                    captionText="React"
+                    containerHeight="64px"
+                    containerWidth="64px"
+                    imageHeight="56px"
+                    imageWidth="56px"
+                    rotateAmplitude={12}
+                    scaleOnHover={1.18}
+                    showMobileWarning={false}
+                    showTooltip={true}
+                    displayOverlayContent={false}
+                  />
+                  <TiltedCard
+                    imageSrc={cssLogo}
+                    altText="CSS"
+                    captionText="CSS"
+                    containerHeight="64px"
+                    containerWidth="64px"
+                    imageHeight="64px"
+                    imageWidth="64px"
+                    rotateAmplitude={12}
+                    scaleOnHover={1.18}
+                    showMobileWarning={false}
+                    showTooltip={true}
+                    displayOverlayContent={false}
+                  />
+                  <TiltedCard
+                    imageSrc={htmlLogo}
+                    altText="HTML"
+                    captionText="HTML"
+                    containerHeight="64px"
+                    containerWidth="64px"
+                    imageHeight="64px"
+                    imageWidth="64px"
+                    rotateAmplitude={12}
+                    scaleOnHover={1.18}
+                    showMobileWarning={false}
+                    showTooltip={true}
+                    displayOverlayContent={false}
+                  />
+                </div>
+              </div>
             </SpotlightCard>
           </div>
-          <section id="languages">
-          <div className={styles.languagesTitle}>Languages I Know</div>
-          <div className={styles.languages}>
-              <TiltedCard
-                imageSrc={jsLogo}
-                altText="JavaScript"
-                captionText="JavaScript"
-                containerHeight="64px"
-                containerWidth="64px"
-                imageHeight="64px"
-                imageWidth="64px"
-                rotateAmplitude={12}
-                scaleOnHover={1.18}
-                showMobileWarning={false}
-                showTooltip={true}
-                displayOverlayContent={false}
-              />
-              <TiltedCard
-                imageSrc={reactLogo}
-                altText="React"
-                captionText="React"
-                containerHeight="64px"
-                containerWidth="64px"
-                imageHeight="56px"
-                imageWidth="56px"
-                rotateAmplitude={12}
-                scaleOnHover={1.18}
-                showMobileWarning={false}
-                showTooltip={true}
-                displayOverlayContent={false}
-              />
-              <TiltedCard
-                imageSrc={cssLogo}
-                altText="CSS"
-                captionText="CSS"
-                containerHeight="64px"
-                containerWidth="64px"
-                imageHeight="64px"
-                imageWidth="64px"
-                rotateAmplitude={12}
-                scaleOnHover={1.18}
-                showMobileWarning={false}
-                showTooltip={true}
-                displayOverlayContent={false}
-              />
-              <TiltedCard
-                imageSrc={htmlLogo}
-                altText="HTML"
-                captionText="HTML"
-                containerHeight="64px"
-                containerWidth="64px"
-                imageHeight="64px"
-                imageWidth="64px"
-                rotateAmplitude={12}
-                scaleOnHover={1.18}
-                showMobileWarning={false}
-                showTooltip={true}
-                displayOverlayContent={false}
-              />
-            </div>
-          </section>
+          {/* Contact Cards Row */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', margin: '2.5rem 0' }}>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
+              <h2>Contact Me</h2>
+              <p>Email: <a href="mailto:your@email.com" style={{ color: '#a259ff' }}>your@email.com</a></p>
+              <p>LinkedIn: <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>linkedin.com</a></p>
+            </SpotlightCard>
+            <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
+              <h2>Let's Connect</h2>
+              <p>Instagram: <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>instagram.com</a></p>
+              <p>GitHub: <a href="https://github.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>github.com</a></p>
+            </SpotlightCard>
+          </div>
         </div>
       </div>
     </>
