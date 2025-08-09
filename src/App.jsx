@@ -1,18 +1,11 @@
 import styles from './App.module.css';
 import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import jsLogo from './assets/js.svg';
-import cssLogo from './assets/css.svg';
-import htmlLogo from './assets/html.svg';
 import typescriptLogo from './assets/typescript.svg';
 import pythonLogo from './assets/python.svg';
 import nodejsLogo from './assets/nodejs.svg';
 import cLogo from './assets/c.svg';
 import javaLogo from './assets/java.svg';
-import goLogo from './assets/go.svg';
-import phpLogo from './assets/php.svg';
-import rubyLogo from './assets/ruby.svg';
-import swiftLogo from './assets/swift.svg';
 import TextType from './TextType';
 import TechStackIcon from './TechStackIcon';
 import Particles from './Particles';
@@ -22,6 +15,8 @@ import SectionTabs from './SectionTabs';
 import SocialIcons from './SocialIcons';
 import AnimatedBackground from './AnimatedBackground';
 import { useState, useEffect } from 'react';
+
+// Removed unused imports: viteLogo, cssLogo, htmlLogo, goLogo, phpLogo, rubyLogo, swiftLogo
 
 const sectionTabs = [
   { id: 'about', label: 'About' },
@@ -86,8 +81,8 @@ function App() {
                   <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
                     <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" style={{ width: 38, height: 38 }} />
                     <TechStackIcon TechStackIcon={reactLogo} Language="React" style={{ width: 38, height: 38 }} />
-                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" Language="CSS" style={{ width: 38, height: 38 }} />
-                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" Language="HTML" style={{ width: 38, height: 38 }} />
+                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" Language="CSS" style={{ width: 38, height: 38, display: 'inline-block', verticalAlign: 'middle' }} />
+                    <TechStackIcon TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" Language="HTML" style={{ width: 38, height: 38, display: 'inline-block', verticalAlign: 'middle' }} />
                     <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" style={{ width: 38, height: 38 }} />
                     <TechStackIcon TechStackIcon={pythonLogo} Language="Python" style={{ width: 38, height: 38 }} />
                     <TechStackIcon TechStackIcon={nodejsLogo} Language="Node.js" style={{ width: 38, height: 38 }} />
