@@ -15,6 +15,9 @@ card .tilted-card-figure {
   text-align: center;
   font-size: 0.875rem;
   display: none;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
 }
 
 @media (max-width: 640px) {
@@ -24,6 +27,11 @@ card .tilted-card-figure {
   .tilted-card-caption {
     display: none;
   }
+}
+
+:root {
+  --card-radius: 15px;
+  --caption-radius: 4px;
 }
 
 .tilted-card-inner {
@@ -36,8 +44,7 @@ card .tilted-card-figure {
   top: 0;
   left: 0;
   object-fit: cover;
-  border-radius: 15px;
-  will-change: transform;
+  border-radius: var(--card-radius);
   transform: translateZ(0);
 }
 
@@ -46,8 +53,8 @@ card .tilted-card-figure {
   top: 0;
   left: 0;
   z-index: 2;
-  will-change: transform;
   transform: translateZ(30px);
+  transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
 .tilted-card-caption {
@@ -55,11 +62,17 @@ card .tilted-card-figure {
   position: absolute;
   left: 0;
   top: 0;
-  border-radius: 4px;
-  background-color: #fff;
+  border-radius: var(--caption-radius);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 4px 10px;
   font-size: 10px;
-  color: #2d2d2d;
+  color: #111;
   opacity: 0;
   z-index: 3;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.tilted-card-inner:hover .tilted-card-img,
+.tilted-card-inner:hover .tilted-card-overlay {
+  will-change: transform;
 }
