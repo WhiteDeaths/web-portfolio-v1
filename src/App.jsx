@@ -77,26 +77,41 @@ function App() {
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Languages I Know</h1>
                 <div className={styles.languages}>
                   <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
-                    <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" style={{ width: 38, height: 38 }} />
-                    <TechStackIcon TechStackIcon={reactLogo} Language="React" style={{ width: 38, height: 38 }} />
-                    <TechStackIcon
-                      TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                      Language="CSS"
-                      style={{ width: 38, height: 38, objectFit: 'contain', display: 'inline-block', verticalAlign: 'middle' }}
-                    />
-                    <TechStackIcon
-                      TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                      Language="HTML"
-                      style={{ width: 38, height: 38, objectFit: 'contain', display: 'inline-block', verticalAlign: 'middle' }}
-                    />
-                    <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" style={{ width: 38, height: 38 }} />
-                    <TechStackIcon TechStackIcon={pythonLogo} Language="Python" style={{ width: 38, height: 38 }} />
-                    <TechStackIcon TechStackIcon={nodejsLogo} Language="Node.js" style={{ width: 38, height: 38 }} />
+                    <div className={styles.languageIconBox}>
+                      <TechStackIcon TechStackIcon={jsLogo} Language="JavaScript" />
+                    </div>
+                    <div className={styles.languageIconBox}>
+                      <TechStackIcon TechStackIcon={reactLogo} Language="React" />
+                    </div>
+                    <div className={styles.languageIconBox}>
+                      <TechStackIcon
+                        TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                        Language="CSS"
+                      />
+                    </div>
+                    <div className={styles.languageIconBox}>
+                      <TechStackIcon
+                        TechStackIcon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                        Language="HTML"
+                      />
+                    </div>
+                    <div className={styles.languageIconBox}>
+                      <TechStackIcon TechStackIcon={typescriptLogo} Language="TypeScript" />
+                    </div>
+                    <div className={styles.languageIconBox}>
+                      <TechStackIcon TechStackIcon={pythonLogo} Language="Python" />
+                    </div>
+                    <div className={styles.languageIconBox}>
+                      <TechStackIcon TechStackIcon={nodejsLogo} Language="Node.js" />
+                    </div>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
-                    <TechStackIcon TechStackIcon={cLogo} Language="C" style={{ width: 38, height: 38 }} />
-                    <TechStackIcon TechStackIcon={javaLogo} Language="Java" style={{ width: 38, height: 38 }} />
-                    {/* Removed C++ and its icon */}
+                    <div className={styles.languageIconBox}>
+                      <TechStackIcon TechStackIcon={cLogo} Language="C" />
+                    </div>
+                    <div className={styles.languageIconBox}>
+                      <TechStackIcon TechStackIcon={javaLogo} Language="Java" />
+                    </div>
                   </div>
                 </div>
               </div>

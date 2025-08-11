@@ -230,3 +230,20 @@
   justify-content: center;
   margin-right: 0.2rem;
 }
+
+.languageIconBox {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+}
+
+.languageIconBox img,
+.languageIconBox svg {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+}
