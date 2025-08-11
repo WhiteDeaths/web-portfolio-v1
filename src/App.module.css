@@ -232,7 +232,7 @@
 }
 
 .languageIconBox {
-  width: 48px;
+  width: 48px;         /* Match js.svg size */
   height: 48px;
   display: flex;
   align-items: center;
@@ -242,7 +242,7 @@
 
 .languageIconBox img,
 .languageIconBox svg {
-  width: 38px;
+  width: 38px;         /* Match js.svg's viewBox/content size */
   height: 38px;
   object-fit: contain;
   display: block;
