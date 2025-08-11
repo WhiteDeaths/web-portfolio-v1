@@ -26,6 +26,10 @@ const sectionTabs = [
 ];
 
 function App() {
+  useEffect(() => {
+    document.title = "James Upson";
+  }, []);
+
   return (
     <>
       <AnimatedBackground />
