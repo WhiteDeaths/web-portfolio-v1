@@ -122,19 +122,19 @@ function App() {
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="projects">
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Projects</h1>
-                <p>Current projects completed: 8</p>
+                <p style={{ textAlign: 'center' }}>Current projects completed: 8</p>
               </div>
             </SpotlightCard>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="certificates">
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Certificates</h1>
-                <p>Certifications Achieved: 3</p>
+                <p style={{ textAlign: 'center' }}>Certifications Achieved: 3</p>
               </div>
             </SpotlightCard>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410, width: '100%' }}>
               <div id="experience">
                 <h1 style={{ textAlign: 'center', width: '100%' }}>Years of Experience</h1>
-                <p>Years Of Experience: 1</p>
+                <p style={{ textAlign: 'center' }}>Years Of Experience: 1</p>
               </div>
             </SpotlightCard>
           </div>
