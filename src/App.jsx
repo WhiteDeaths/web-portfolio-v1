@@ -144,13 +144,13 @@ function App() {
               <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
                 <h2>Contact Me</h2>
                 <p>Email: <a href="mailto:upsonjames1@gmail.com" style={{ color: '#a259ff' }}>upsonjames1@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/james-upson" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>linkedin.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/james-upson" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>James-Upson</a></p>
               </SpotlightCard>
             </div>
             <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(162, 89, 255, 0.25)" style={{ minWidth: 320, maxWidth: 410 }}>
               <h2>Let's Connect</h2>
-              <p>Instagram: <a href="https://www.instagram.com/james_upsxn" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>instagram.com</a></p>
-              <p>GitHub: <a href="https://github.com/WhiteDeaths" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>github.com</a></p>
+              <p>Instagram: <a href="https://www.instagram.com/james_upsxn" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>james_upsxn</a></p>
+              <p>GitHub: <a href="https://github.com/WhiteDeaths" target="_blank" rel="noopener noreferrer" style={{ color: '#a259ff' }}>WhiteDeaths</a></p>
             </SpotlightCard>
           </div>
         </div>
